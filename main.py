@@ -13,6 +13,6 @@ jwtoken = driver.execute_script('return window.localStorage["token"]')
    
 if jwtoken:
   with open('token', 'w') as f:
-  f.write(jwtoken)
+    f.write(jwtoken)
 
 driver.quit()

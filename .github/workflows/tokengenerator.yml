@@ -4,8 +4,8 @@ name: tokenGenerator
 
 # Controls when the workflow will run
 on:
-  schedule:
-    - cron: '*/10 * * * *'
+  #schedule:
+  #  - cron: '*/10 * * * *'
     
   workflow_dispatch:
 

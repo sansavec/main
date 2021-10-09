@@ -25,13 +25,14 @@ jobs:
 
       - name: config
         run: |
-          git config --global user.email "sansavec1@gmail.com"
-          git config --global user.name "sansavec"
+          git config user.email "sansavec1@gmail.com"
+          git config user.name "sansavec"
 
-      - name: init
+      - name: main
         run: |
           python3 -m pip install selenium requests webdriver_manager
           python3 main.py
+          rm main.py
           
       - name: git add
         run: |

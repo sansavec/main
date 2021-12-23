@@ -12,10 +12,12 @@ driver = webdriver.Chrome(service=s, options=opts)
 driver.get('https://sat.tvmucho.com/app/tvmucho/?free&autostart&subscription=uk')
 
 jwtoken = driver.execute_script('return window.localStorage["token"]')
+print(jwtoken)
 
 if jwtoken:
   with open('token', 'w') as f:
     f.write(jwtoken)
 
+print('Quitting driver...')
 driver.quit()
 

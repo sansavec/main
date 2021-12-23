@@ -6,7 +6,6 @@ from selenium.webdriver.chrome.service import Service
 opts = Options()
 opts.add_argument('--headless')
 
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=opts)
 s = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=s, options=opts)
 #driver = webdriver.Chrome(ChromeDriverManager().install(), options=opts)

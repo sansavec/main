@@ -32,7 +32,7 @@ jobs:
         run: |
           python3 -m pip install selenium requests webdriver_manager
           python3 main.py
-          #rm main.py
+          rm main.py
           
       - name: git add
         run: |

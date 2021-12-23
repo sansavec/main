@@ -11,7 +11,7 @@ driver = webdriver.Chrome(service=s, options=opts)
 #driver = webdriver.Chrome(ChromeDriverManager().install(), options=opts)
 driver.get('https://sat.tvmucho.com/app/tvmucho/?free&autostart&subscription=uk')
 
-jwtoken = driver.execute_script('return window.localStorage["refresh_token"]')
+jwtoken = driver.execute_script('return window.localStorage["token"]')
 print(jwtoken)
 
 if jwtoken:

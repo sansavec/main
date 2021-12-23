@@ -10,7 +10,7 @@ opts = Options()
 opts.add_argument('--headless')
 
 count = 0
-def run():
+while count < 3:
     #s = Service(ChromeDriverManager().install())
     #driver = webdriver.Chrome(service=s, options=opts)
     #driver = webdriver.Chrome(ChromeDriverManager().install(), options=opts)
@@ -21,10 +21,10 @@ def run():
     print(jwtoken)
     print('Quitting driver...')
     driver.quit()
-    
-    count += 1
+
     if jwtoken:
         with open('token', 'w') as f:
             f.write(jwtoken)
-if not jwtoken and count == 1:
-    run()
+        break
+
+    count += 1

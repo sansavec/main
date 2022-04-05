@@ -24,7 +24,7 @@ while count < 20:
 
     if jwtoken:
         with open('token', 'w') as f:
-            f.write(jwtoken)
+            f.write(f'{jwtoken}')
         break
 
     count += 1
